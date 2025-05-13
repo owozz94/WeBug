@@ -15,11 +15,13 @@ end
 
 function _update()
     player1:update()    
-    player2:update()    
+    player2:update()      
+    
 end
 
 function _draw()
     cls()    
+    gfx.line(0,3,64+3,64+32,7)
     player1:draw()
     player2:draw()    
 end

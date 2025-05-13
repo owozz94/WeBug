@@ -7,6 +7,7 @@ This document contains information that is proprietary to kolokuz, Inc
 and no part of this source code may be used without explicit permission from kolokuz, Inc.
 ]]--
 
+#include pico8_api.lua
 #include config.lua
 #include player.lua
 
