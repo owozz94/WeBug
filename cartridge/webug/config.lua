@@ -8,6 +8,12 @@
 PLAYER = {
     NO1 = 0,
     NO2 = 1,
+    NO3 = 2,
+    NO4 = 3,
+    NO5 = 4,
+    NO6 = 5,
+    NO7 = 6,
+    NO8 = 7,
 }
 
 BTN = {
