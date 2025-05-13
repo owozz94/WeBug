@@ -1,16 +1,20 @@
 pico-8 cartridge // http://www.pico-8.com
 version 42
 __lua__
---[[ 
-Copyright 2025 - 2035 by kolokuz, Inc.  All rights reserved.
-This document contains information that is proprietary to kolokuz, Inc 
-and no part of this source code may be used without explicit permission from kolokuz, Inc.
-]]--
+--------------------------------------------------------------------------------
+-- Copyright 2025 - 2035 by kolokuz, Inc.  All rights reserved.
+-- This document contains information that is proprietary to kolokuz, Inc 
+-- and no part of this source code may be used without explicit permission from kolokuz, Inc.
+--------------------------------------------------------------------------------
 
+
+--------------------------------------------------------------------------------
+-- rawish include first
 #include pico8_api.lua
 #include config.lua
 #include player.lua
 
+--------------------------------------------------------------------------------
 --main.lua must be included last
 #include main.lua
 
