@@ -15,19 +15,19 @@ end
 
 -- 선 그리기
 -- x0, y0: 시작 좌표 / x1, y1: 끝 좌표 / col: 색상 (선택)
-gfx.line function(x0, y0, x1, y1, col)
+gfx.line = function(x0, y0, x1, y1, col)
 	line(x0, y0, x1, y1, col)
 end
 
 -- 문자열 출력
 -- str: 출력할 문자열 / x, y: 위치 / col: 색상 (선택)
-gfx.print function(str, x, y, col)
+gfx.print = function(str, x, y, col)
 	print(str, x, y, col)
 end
 
 -- 사각형 그리기 (테두리만)
 -- x0, y0, x1, y1: 꼭지점 좌표 / col: 색상 (선택)
-gfx.rect function(x0, y0, x1, y1, col)
+gfx.rect = function(x0, y0, x1, y1, col)
 	rect(x0, y0, x1, y1, col)
 end
 
@@ -45,12 +45,12 @@ input = {}
 
 -- 특정 버튼이 눌려져 있는지 확인
 -- i: 버튼 인덱스 (0~5) / p: 플레이어 번호 (기본: 0)
-input.btn function(i, p)
+input.btn = function(i, p)
 	return btn(i, p)
 end
 
 -- 버튼의 트리거 입력 감지
-input.btnp function(i, p)
+input.btnp = function(i, p)
 	return btnp(i, p)
 end
 
@@ -60,52 +60,52 @@ end
 mathx = {}
 
 -- 내림
-mathx.flr function(x)
+mathx.flr = function(x)
 	return flr(x)
 end
 
 -- 올림
-mathx.ceil function(x)
+mathx.ceil = function(x)
 	return ceil(x)
 end
 
 -- 절댓값
-mathx.abs function(x)
+mathx.abs = function(x)
 	return abs(x)
 end
 
 -- 최대값
-mathx.max function(a, b)
+mathx.max = function(a, b)
 	return max(a, b)
 end
 
 -- 최소값
-mathx.min function(a, b)
+mathx.min = function(a, b)
 	return min(a, b)
 end
 
 -- 중간값 반환
-mathx.mid function(x, y, z)
+mathx.mid = function(x, y, z)
 	return mid(x, y, z)
 end
 
 -- 사인
-mathx.sin function(x)
+mathx.sin = function(x)
 	return sin(x)
 end
 
 -- 코사인
-mathx.cos function(x)
+mathx.cos = function(x)
 	return cos(x)
 end
 
 -- 랜덤값
-mathx.rnd function(x)
+mathx.rnd = function(x)
 	return rnd(x)
 end
 
 -- 랜덤 시드 설정
-mathx.srand function(seed)
+mathx.srand = function(seed)
 	srand(seed)
 end
 
@@ -115,22 +115,22 @@ end
 mem = {}
 
 -- 8비트 메모리 읽기
-mem.peek function(addr)
+mem.peek = function(addr)
 	return peek(addr)
 end
 
 -- 8비트 메모리 쓰기
-mem.poke function(addr, val)
+mem.poke = function(addr, val)
 	poke(addr, val)
 end
 
 -- 메모리 블록 복사
-mem.memcpy function(dest, source, len)
+mem.memcpy = function(dest, source, len)
 	memcpy(dest, source, len)
 end
 
 -- 메모리 초기화
-mem.memset function(dest, val, len)
+mem.memset = function(dest, val, len)
 	memset(dest, val, len)
 end
 
@@ -140,32 +140,32 @@ end
 sys = {}
 
 -- 프로그램 종료
-sys.stop function(msg)
+sys.stop = function(msg)
 	stop(msg)
 end
 
 -- 카트리지 로드
-sys.load function(filename, breadcrumb, param_str)
+sys.load = function(filename, breadcrumb, param_str)
 	load(filename, breadcrumb, param_str)
 end
 
 -- 콘솔 재부팅
-sys.reboot function()
+sys.reboot = function()
 	reboot()
 end
 
 -- 프로그램 실행
-sys.run function(param_str)
+sys.run = function(param_str)
 	run(param_str)
 end
 
 -- 디렉토리 목록 출력
-sys.ls function(dir)
+sys.ls = function(dir)
 	ls(dir)
 end
 
 -- 도움말 출력
-sys.help function()
+sys.help = function()
 	help()
 end
 --------------------------------------------------------------------------------
