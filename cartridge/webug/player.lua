@@ -6,25 +6,29 @@
 -- 플레이어 객체를 정의하는 모듈입니다.
 --------------------------------------------------------------------------------
 
-function init_player(y, play_no)
+function init_player(x, play_no)
     local player = 
     {        
-        y = y,
+        x = x,
+        y = POS.BOTTOM,
         size = 3,
         life = 3,
         speed = 2,
         play_no = play_no,
+        color = 3,
     }
 
     function player:draw()
-        circfill(self.y, 120, self.size, 3)
+        circfill(self.x, self.y, self.size, self.color)
     end
 
     function player:update()
-        if btn(BTN.LEFT) then self.y -= self.speed end
-        if btn(BTN.RIGHT) then self.y += self.speed end
-        if btn(BTN.DOWN) then self.size -= self.speed end
-        if btn(BTN.UP) then self.size += self.speed end
+        if btn(BTN.LEFT, play_no) then self.x -= self.speed end
+        if btn(BTN.RIGHT, play_no) then self.x += self.speed end
+        if btn(BTN.DOWN, play_no) then self.size -= self.speed end
+        if btn(BTN.UP, play_no) then self.size += self.speed end
+        if btn(BTN.JUMP, play_no) then self.y -= self.speed end
+        if btn(BTN.FIRE, play_no) then self.color = flr(rnd(8)) end
     end
 
     return player

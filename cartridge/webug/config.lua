@@ -11,10 +11,14 @@ PLAYER = {
 }
 
 BTN = {
-    LEFT = 0,
-    RIGHT = 1,
-    UP = 2,
-    DOWN = 3,
-    JUMP = 4,
-    FIRE = 5
+    LEFT = 0, --1P(←) 2P(S)
+    RIGHT = 1, --1P(→) 2P(F)
+    UP = 2, --1P(↑) 2P(E)
+    DOWN = 3, --1P(↓) 2P(D)
+    JUMP = 4, --1P(Z,N,C) 2P(TAB)
+    FIRE = 5 --1P(X,M,V) 2P(Q,A)
+}
+
+POS = {
+    BOTTOM = 120,    
 }

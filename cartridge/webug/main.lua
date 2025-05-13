@@ -13,11 +13,13 @@ function _init()
     cls()
 end
 
-function _update()    
+function _update()
     player1:update()    
+    player2:update()    
 end
 
 function _draw()
-    cls()
+    cls()    
     player1:draw()
+    player2:draw()    
 end
