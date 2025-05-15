@@ -1,10 +1,9 @@
 -- LUA_BASIC
--- 이 파일은 PICO-8의 주요 내용을 정리한 것입니다.
+-- 이 파일은 PICO-8에서 사용하는 LUA 언어의 주요 내용을 정리한 것입니다.
 
 global_number_a = 3 --전역변수.
 
-function lua_basic()
-	
+function lua_basic()	
 	--변수선언---------------------------------------------------------------
 	global_number_b = 8 --전역변수. 함수안에서 선언했지만 함수밖에서도 접근가능
 	local number_var = 3.14
