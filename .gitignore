@@ -12,6 +12,8 @@
 
 # demos folder
 demos/
-AppData/
 chang_test/
+!AppData/
+AppData/*
+!AppData/config.txt
 # End of https://www.toptal.com/developers/gitignore/api/pico8
