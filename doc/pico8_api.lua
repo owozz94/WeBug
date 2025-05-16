@@ -70,7 +70,7 @@ function pico8_api_gfx()
 	-- oval(X0,Y0, X1,Y1, [색상]) 
 	-- 타원 그리기
 	oval(64,64, 90,90, 8) -- 기본컬러로 타원 그리기
-	oval(64,64 80,80, COLOR.ORANGE) -- 오렌지색으로 타원 그리기
+	oval(64,64, 80,80, COLOR.ORANGE) -- 오렌지색으로 타원 그리기
 	ovalfill(64,64, 10,10, COLOR.ORANGE) -- 오렌지색으로 타원 채우기
 
 
@@ -390,7 +390,7 @@ function pico8_api_math()
 	-- rnd(최대값)
 	-- 랜덤값. 소숫점까지 리턴
 	value = rnd(100) -- 0.0~100.0 사이의 랜덤값 리턴
-	value == abs(rnd(100)) -- 0~100 사이의 정수 랜덤값 리턴
+	value = abs(rnd(100)) -- 0~100 사이의 정수 랜덤값 리턴
 	
 	-- srand(랜덤seed)
 	-- 랜덤 시드 설정
