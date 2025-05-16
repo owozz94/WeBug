@@ -1,0 +1,57 @@
+
+---------------------------------------------------------------------------------------------
+## 처음 접하는분을 위한 오프닝
+    - pico8_run.bat 을 실행
+    - 검은 CLI 화면이 나타남
+    - ESC 를 눌러서 프로젝트 편집기 켜기
+    - 우상단 5개의 아이콘 차례로 코드,스프라이트,맵,효과음,음악 탭 둘러보기
+    - 코드탭으로 돌아와 print("hello") 입력
+    - ESC를 눌러서 CLI 화면으로 돌아오기
+    - SAVE MYPROJECT 입력
+    - LOAD MyPROJECT 입력
+    - RUN (CTRL + R) 입력
+    - cartridge폴더밑에 MYPROJECT.p8 이 생긴걸 확인
+
+
+## 데모와 기본게임 다운받기
+    - pico8 CLI 에 INSTALL_DEMOS 입력
+    - pico8 CLI 에 INSTALL_GAMES 입력
+    - CD DEMOS 한 후 LS 하여 실행할 프로그램 확인
+    - LOAD 프로그램이름 입력
+    - RUN (CTRL + S) 입력
+    - 방향키와 Z X 키
+    
+
+## 외부 게임 다운받기
+    - RUN SPLORE: 어플리케이션 마켓 프로그램
+
+
+## VSCODE 확장설치
+    - pico8-ls  :  pico8 api 자동완성, 주석 지원
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------
+[디렉토리구조]
+    │
+    ├─cart	            	★★pico8_run.bat 을 실행했을때 기준 폴더
+    │
+    ├─doc
+    │  ├─lua.lua           	lua 사용법 정리
+    │  └─api.lua          	pico8 api 정리
+    │
+    ├─pico-8
+    │   ├─pico-8_manual.txt     영문 매뉴얼
+    │   ├─pico-8_매뉴얼.txt     한글 번역한 매뉴얼
+    │   ├─pico8.exe             pico8 실행파일
+    │   ├─pico8.dat    
+    │   └─SDL2.dll
+    │
+    ├─pico8_run.bat          	--pico8을 cartridge폴더기준으로 구동시킴
+    │
+    └─둘러보기.txt		--현재파일
+
+
