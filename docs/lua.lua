@@ -39,7 +39,7 @@ function lua_basic()
 	elseif x == 10 then
 		print("x는 10입니다.")	
 	elseif x > 0 and x < 10 then
-		print("x는 0보다 크고 10보다 작습니다.")	
+		print("x는 0보다 크고 10보다 작습니다.")
 	elseif not (x == 10) then
 		print("x는 10이 아닙니다.")
 	else

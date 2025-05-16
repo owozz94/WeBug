@@ -25,6 +25,24 @@ BTN = {
     FIRE = 5    --1P(X,M,V) 2P(Q,A)
 }
 
+MOUSE_BTN = {
+    LEFT = 0,   -- 마우스 왼쪽 버튼
+    RIGHT = 1,  -- 마우스 오른쪽 버튼
+    MIDDLE = 2, -- 마우스 가운데 버튼
+}
+
+XDIR={
+    LEFT = false,
+    RIGHT = true,
+}
+
+YDIR={
+    UP = false,
+    DOWN = true,
+}
+
+
+
 COLOR = {
     BLACK       = 0,   -- 검정
     DARK_BLUE   = 1,   -- 어두운 파랑
