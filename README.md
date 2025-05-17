@@ -17,8 +17,6 @@
 
 1. 피코파크(PICO PARK)
 
-![1000219349.webp](attachment:e03c566f-4db2-4260-9caf-103cc3ae976c:1000219349.webp)
-
 - 멀티플레이 협동 퍼즐게임.(최대 8인)
 - 총 12개 월드로, 1개의 월드당 4개의 스테이지가 있다. 총 48개의 스테이지를 플레이한다.
 
@@ -42,41 +40,35 @@
 
 ---
 
-## PICO8 튜토리얼
+## PICO8 튜토리얼 사이트
+
+[NerdyTeachers](https://www.notion.so/NerdyTeachers-1f58e9695fb68025b4ecc51cf08ed21a?pvs=21)
 
 ---
-
-[카트리지 다운받기](https://www.notion.so/1ee8e9695fb6804c9501cd304d468b17?pvs=21)
 
 [Curated PICO-8 Games!](https://nerdyteachers.com/PICO-8/Games/)
 
-## PICO8 에디터
+## PICO8 에디터 사용법
 
 ---
 
-[Sprite Editor](https://www.notion.so/Sprite-Editor-1ed8e9695fb680dab3fbc7e418a08112?pvs=21)
+[Sprite 에디터](https://www.notion.so/Sprite-1ed8e9695fb680dab3fbc7e418a08112?pvs=21)
 
-[Map Editor](https://www.notion.so/Map-Editor-1ed8e9695fb680a99d90edaf8bb1a8d0?pvs=21)
+[Map 에디터](https://www.notion.so/Map-1ed8e9695fb680a99d90edaf8bb1a8d0?pvs=21)
 
-[Music Editor](https://www.notion.so/Music-Editor-1ee8e9695fb680c88f4fdbc4def5f1c2?pvs=21)
+[뮤직 에디터](https://www.notion.so/1f58e9695fb680b292fdc0b38b2313b8?pvs=21)
+
+[SFX 에디터](https://www.notion.so/SFX-1ee8e9695fb680c88f4fdbc4def5f1c2?pvs=21)
 
 ## PICO8 프로그래밍
 
 ---
 
-[환경설정](https://www.notion.so/1ee8e9695fb680cdae4fcd260ae7b65e?pvs=21)
-
-[PICO8 API](https://www.notion.so/PICO8-API-1ed8e9695fb6807b9019c482863cb810?pvs=21)
-
 [공식 매뉴얼](https://www.notion.so/1ed8e9695fb6807185c2e0be32e13246?pvs=21)
 
-[커맨드라인](https://www.notion.so/1ed8e9695fb6801ab7c1dc1d0aa74d53?pvs=21)
+[개발 환경 설정](https://www.notion.so/1ee8e9695fb680cdae4fcd260ae7b65e?pvs=21)
 
-[Lua 개론](https://www.notion.so/Lua-1ed8e9695fb68036b9dfebb05c0024f1?pvs=21)
-
-[게임 코드 샘플](https://www.notion.so/1ed8e9695fb6807ea34ac14c0e8ec86f?pvs=21)
-
-[온라인멀티플레이](https://www.notion.so/1ed8e9695fb68083a29aec036b1fc8c9?pvs=21)
+[공부](https://www.notion.so/1f38e9695fb68072a629c5a5a36c5481?pvs=21)
 
 ## 로드맵
 
