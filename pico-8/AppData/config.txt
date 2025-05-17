@@ -9,7 +9,7 @@
 
 // :: Video Settings
 
-window_size 4 // window width, height
+window_size 1280 1280 // window width, height
 screen_size 0 0 // screen width, height (stretched to window) 
 show_fps 0 // Draw frames per second in the corner
 
@@ -30,15 +30,13 @@ foreground_sleep_ms 2 // number of milliseconds to sleep each frame. Try 10 to c
 
 background_sleep_ms 10 // number of milliseconds to sleep each frame when running in the background
 
-sessions 1 // number of times program has been run
+sessions 2 // number of times program has been run
 
 // (scancode) hold this key down and left-click to simulate right-click
 rmb_key 0 // 0 for none  226 for LALT
 
-
 // Desktop for saving screenshots etc. Defaults to $HOME/Desktop
-desktop_path 
-
+desktop_path C:/Users/GV301/Dropbox/git/WeBug_owozz94/screenshots/
 
 // 1 to allow controller input even when application is in background
 read_controllers_in_background 0
@@ -74,11 +72,11 @@ volume 256
 
 
 // Location of pico-8's root folder
-root_path ./AppData/carts/
+root_path C:/Users/GV301/Dropbox/git/WeBug_owozz94/carts/
 
 
 // Location of cartridge save data
-cdata_path ./AppData/cdata/
+cdata_path C:/Users/GV301/Dropbox/git/WeBug_owozz94/pico-8/AppData/cdata/
 
 
 // Specify which player index joystick control begins at (0..7)
