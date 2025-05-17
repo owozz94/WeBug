@@ -1,22 +1,22 @@
 ---------------------------------------------------------------------------------------------
 [디렉토리구조]
     │
-    ├─cart	            	★★pico8_run.bat 을 실행했을때 기준 폴더
+    ├─carts	            	            ★★pico8_run.bat 을 실행했을때 기준 폴더
     │
-    ├─doc
-    │  ├─lua.lua           	lua 사용법 정리
-    │  └─api.lua          	pico8 api 정리
+    ├─docs
+    │   ├─pico-8_manual_한글.txt         한글 번역한 매뉴얼
+    │   ├─lua.lua           	         lua 사용법 정리
+    │   └─api.lua          	             pico8 api 정리
     │
-    ├─pico-8
-    │   ├─pico-8_manual.txt     영문 매뉴얼
-    │   ├─pico-8_매뉴얼.txt     한글 번역한 매뉴얼
-    │   ├─pico8.exe             pico8 실행파일
+    ├─pico-8                             pico8 프로그램폴더
+    │   ├─pico-8_manual.txt              
+    │   ├─pico8.exe                      
     │   ├─pico8.dat    
     │   └─SDL2.dll
+    
+    ├─pico8_run.bat                     cartridge폴더기준 pico8 실행
     │
-    ├─pico8_run.bat          	--pico8을 cartridge폴더기준으로 구동시킴
-    │
-    └─둘러보기.txt		--현재파일
+    └─둘러보기.txt	                    <현재파일
 
 
 
