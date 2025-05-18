@@ -4,7 +4,7 @@ __lua__
 a={y=100,dy=0}
 grvt=0.8
 function _update()
-	if(btn(🅾️)) then	a.dy=-6 end
+	if(btn(4)) then	a.dy=-6 end
 	a.dy += grvt
 	a.y += a.dy
 	if(a.y>100) then 

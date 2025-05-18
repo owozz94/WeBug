@@ -1,6 +1,7 @@
 pico-8 cartridge // http://www.pico-8.com
 version 42
 __lua__
+#include config.lua
 #include main.lua
 print("hihihihi")
 __gfx__
