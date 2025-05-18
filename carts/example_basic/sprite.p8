@@ -17,7 +17,7 @@ function _update()
 end
 function _draw()
 	cls(0)
-	sspr(a.sprite*8,8,8,8,24,40,32,32)
+	--sspr(a.sprite*8,8,8,8,24,40,32,32)
 	spr(a.sprite+16,64,64)
 	spr(b.sprite+0,64,44)
 end
