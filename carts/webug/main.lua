@@ -1,6 +1,10 @@
+dungbox = new_dungbox()
+
 function _init()
     -- Initialize the game
     cls(0)
+    
+
     x = 64
     y = 100
     g = 0.8
@@ -8,8 +12,10 @@ function _init()
 end
 
 msg = 0
-function _update()
+function _update()    
     -- Update game logic
+    dungbox:update()
+
     print("_update")
     if btn(0) then x = x-2 end
     if btn(1) then x = x+2 end
@@ -23,6 +29,7 @@ end
 function _draw()
     -- Draw the screen
     cls(0)
+    dungbox:draw()
 
     if msg==1 then
         
