@@ -11,10 +11,8 @@
 #*.bin
 
 # demos folder
-demos/
-games/
-chang_test/
 AppData/
 screenshots/
+
 
 # End of https://www.toptal.com/developers/gitignore/api/pico8
