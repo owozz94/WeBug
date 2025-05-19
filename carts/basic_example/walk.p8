@@ -4,29 +4,28 @@ __lua__
 x=64
 y=64
 walk_cnt = 0
-walk_spr = 8
+walk_spr = 4
 spd = 2
 sprite = 0
 gnd = 100
+gazeleft = false
 function _update()
 	if btn(0) then	
 		x -= spd
 		walk_cnt+=1
-	end
-	if btn(1) then	
+		gazeleft=true
+	elseif btn(1) then	
 		x += spd
 		walk_cnt+=1
+		gazeleft=false
 	end
 	walk_cnt %= (walk_spr*2)
+	if(walk_cnt < walk_spr) then sprite = 0 else sprite = 1 end
 end
 
 function _draw()
-	cls()
-	if(walk_cnt < walk_spr) then
-		spr(0 , x, gnd) --sprite num: 0, 1
-	else
-		spr(1 , x, gnd) --sprite num: 2, 3
-	end
+	cls(13)	
+	spr(sprite , x, gnd,1,1,gazeleft) --sprite num: 0, 1			
 end
 __gfx__
 01011000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
