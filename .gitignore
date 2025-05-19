@@ -14,10 +14,6 @@
 demos/
 games/
 chang_test/
-
-!pico-8/AppData/
-pico-8/AppData/*
-!pico-8/AppData/config.txt
-
+AppData/
 
 # End of https://www.toptal.com/developers/gitignore/api/pico8
