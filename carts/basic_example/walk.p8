@@ -2,30 +2,24 @@ pico-8 cartridge // http://www.pico-8.com
 version 42
 __lua__
 x=64
-y=64
-walk_cnt = 0
-walk_spr = 4
-spd = 2
-sprite = 0
-gnd = 100
-gazeleft = false
+spd=1.2
+seeleft=false
+sprite=0
+
 function _update()
-	if btn(0) then	
+	if btn(0) then
+		seeleft=true
 		x -= spd
-		walk_cnt+=1
-		gazeleft=true
-	elseif btn(1) then	
+	elseif btn(1) then
+		seeleft=false
 		x += spd
-		walk_cnt+=1
-		gazeleft=false
 	end
-	walk_cnt %= (walk_spr*2)
-	if(walk_cnt < walk_spr) then sprite = 0 else sprite = 1 end
+	sprite = (x/8) % 2 -- x좌표를 8로 나눈값의 홀수짝수 에 따라 스프라이트를0,1로 바꿉니다.
 end
 
 function _draw()
 	cls(13)	
-	spr(sprite , x, gnd,1,1,gazeleft) --sprite num: 0, 1			
+	spr(sprite,  x,127-(20),  1,1, seeleft,false)
 end
 __gfx__
 01011000001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
