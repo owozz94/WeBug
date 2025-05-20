@@ -1,25 +1,27 @@
 pico-8 cartridge // http://www.pico-8.com
 version 42
 __lua__
-a={x=10,y=100,size=3,spd=3}
-b={x=67,y=66,size=16,clr=8}
+a={x=10,y=100, rad=3, size=3, clr= 3, spd=3}
+b={x=67,y=66, rad=16, size=16, clr=7}
 function _update()
 	if btn(➡️) then a.x+=a.spd end
 	if btn(⬅️) then a.x-=a.spd end
 	if btn(⬆️) then a.y-=a.spd end
 	if btn(⬇️) then a.y+=a.spd end
-	dist=sqrt((a.x-b.x)^2+(a.y-b.y)^2)
-	rad=(b.size+a.size)
-	if(dist<=rad) then
-		msg="boom!" b.clr=13
+
+	dist=sqrt((a.x-b.x)^2+(a.y-b.y)^2) -- a b 중점 사이의 거리
+
+	if(dist <= (b.rad + a.rad)) then
+		msg="boom!" b.clr=13 -- a b 중점사이의 거리가 반지름의 합보다 작다. 즉 충돌상태
 	else 
-		msg = "peace" b.clr=8	
+		msg = "peace" b.clr=8
 	end	
 end
+
 function _draw()
 	cls()
-	circfill(a.x,a.y,a.size,3)
-	circfill(b.x,b.y,b.size,b.clr)
+	circfill(a.x,a.y, a.size, a.clr)
+	circfill(b.x,b.y, b.size, b.clr)
 	print(msg, 58,64, 7)
 end
 __gfx__
