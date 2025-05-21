@@ -17,9 +17,7 @@ function new_ball(x, y, size, color, speed)
     function ball:changecolor()
         self.color += 1 
     end
-
     ---------------------    
-
     function ball:update()
         if btn(0) then self.x -= self.speed end
         if btn(1) then self.x += self.speed end
@@ -28,27 +26,27 @@ function new_ball(x, y, size, color, speed)
         if btn(4) then self:sethome() end
         if btn(5) then self:changecolor() end
     end
-
     function ball:draw()
         circfill(self.x, self.y, self.size, self.color) -- x, y, 반지름, 색상
     end
-    
     return ball
 end
-
-
+--================[main_call_back]====================--
 function _init()
     ball1 = new_ball(64, 64, 4, 7, 1)
     ball2 = new_ball(32, 48, 1, 3, 4)
+    ball3 = new_ball(32, 48, 2, 4, -2)
 end
 
 function _update()
     ball1:update()
     ball2:update()
+    ball3:update()
 end
 
 function _draw()
     cls()         -- 화면 지우기
     ball1:draw()   -- 공 그리기
     ball2:draw()
+    ball3:draw()
 end
