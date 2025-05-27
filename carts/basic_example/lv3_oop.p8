@@ -1,14 +1,20 @@
 pico-8 cartridge // http://www.pico-8.com
 version 42
 __lua__
-function new_ball(x, y, size, color, speed)
-    local ball = {}
+function new_ball(x, y, size, color, speed) --new object 같이 생성자이면서 동시에 클래스를 정의합니다
+    
+    local ball = {}-- new_ball() 로 생성한 객체 그 자체입니다.
+    ------------- 딕셔내리로써 밑에서 선언하는 x, y, speed 등의 인스턴스와 
+    ------------- sethome, changecolor, update 등의 함수를 갖는 객체가 됩니다.
+
+
+    
     ball.x = x
     ball.y = y
     ball.speed = speed
     ball.color = color
     ball.size = size
-
+    
     function ball:sethome()
         self.x = 64
         self.y = 64
@@ -17,7 +23,13 @@ function new_ball(x, y, size, color, speed)
     function ball:changecolor()
         self.color += 1 
     end
-    ---------------------    
+    
+    
+    
+    
+    
+    
+    ------------- 메인의 _update(), _draw() 에 놓을 함수입니다.----------
     function ball:update()
         if btn(0) then self.x -= self.speed end
         if btn(1) then self.x += self.speed end
