@@ -23,7 +23,9 @@ function init_ground()
 end
 
 
-function init_player(ground)
+
+
+function init_player(userNo)
     CAT_SPR = {
         SIT = 0,
         WALK1 = 1,
@@ -34,6 +36,7 @@ function init_player(ground)
 
     local player = 
     {
+        userNo = userNo,
         old_x = 0,
         old_y = 0,
         x = 64,
@@ -54,20 +57,20 @@ function init_player(ground)
         self.old_x = self.x
         self.old_y = self.y
 
-        if btn(BTN.LEFT) then 
+        if btn(BTN.LEFT,userNo) then 
             self.x -= self.speed 
         end
-        if btn(BTN.RIGHT) then 
+        if btn(BTN.RIGHT,userNo) then 
             self.x += self.speed 
         end
-        if btn(BTN.DOWN) then             
+        if btn(BTN.DOWN,userNo) then             
             self.state = CAT_SPR.SIT
         end
-        if btn(BTN.UP) and (self.on_ground == true) then
+        if btn(BTN.UP,userNo) and (self.on_ground == true) then
             self.dy = -1.2
             self.on_ground = false
         end
-        if btn(BTN.JUMP) then 
+        if btn(BTN.JUMP,userNo) then 
             if(self.on_ground == true) then
                 self.dy = self.jump_power
                 self.on_ground = false
@@ -120,4 +123,26 @@ function init_player(ground)
     end
 
     return player
+end
+
+
+
+function new_objectlayer(obj)
+    objectlayer={}
+    objects={}
+    
+    function objectlayer:add_object()        
+        add(objects, obj)
+    end
+
+    function objectlayer:update()
+        for o in all(objects) do
+            o:update()
+        end
+    end
+
+    function objectlayer:collision()
+        for o in all(objects) do       
+        return false
+    end
 end
