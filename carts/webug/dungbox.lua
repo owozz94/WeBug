@@ -49,8 +49,9 @@ function new_dung()
         end
     end
     function dung:draw()
-        circfill(self.x, 128-self.y, self.size, 3) -- x, y, 반지름, 색상
+        -- circfill(self.x, 128-self.y, self.size, 3) -- x, y, 반지름, 색상
         -- print(self.spd,self.x, 128-self.y)
+        spr(33, self.x, 128-self.y)
     end
     ---------------------------
     function dung:get_x_y_r()
