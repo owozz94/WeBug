@@ -1,13 +1,4 @@
 
-DUNGSTATE ={
-    IDLE={sprite=0x20,time=1},
-    FALL={sprite=0x20,time=1},
-    SPLASH1={sprite=0x21,time=5},
-    SPLASH2={sprite=0x22,time=5},
-    SPLASH3={sprite=0x23,time=10},
-    GONE={sprite=0x20,time=1},
-}
-
 
 --==================[dungbox]===================--
 function new_dungbox()
@@ -47,6 +38,14 @@ end
 function new_dung()
     local dung = {}    
     
+    DUNGSTATE ={        
+        {sprite=0x20,time=1}, --splash1
+        {sprite=0x21,time=8}, --splash2
+        {sprite=0x22,time=8}, --splash3
+        {sprite=0x23,time=16}, --splash4                
+        {sprite=0x24,time=8}, --splash5                
+        {sprite=0x25,time=16}, --delete
+    }
 
     dung.x = flr(rnd(127))
     dung.y = 137
@@ -54,8 +53,10 @@ function new_dung()
     dung.gravity = -0.1 -(rnd(2.0))
     dung.maxspd = -6
     dung.size = 3--rnd(4.0)
-    dung.state = DUNGSTATE.FALL
-    dung.ground = 30
+    dung.state_num = 1
+    dung.state = DUNGSTATE[1]
+    
+    dung.ground = 18
 
     function dung:update()
         self.spd+= self.gravity
@@ -64,24 +65,23 @@ function new_dung()
             self.spd = self.maxspd
         end
 
-        if self.y <= self.ground then
-            dung.state = DUNGSTATE.SPLASH1
+        if self.y <= self.ground then--땅에닿으면
             self.y = self.ground
+            self.state.time -= 1
+            if self.state_num == 1 then
+                sfx(0)
+            end
+            if self.state.time <= 0 then
+                self.state_num += 1
+                self.state = DUNGSTATE[self.state_num] or DUNGSTATE[6]
+            end
+            
         end
+
     end
-    function dung:draw()
-        if self.state == DUNGSTATE.FALL then            
-            spr(32, self.x, 128-self.y)
-        elseif self.state == DUNGSTATE.SPLASH1 then
-            spr(33, self.x, 128-self.y)
-            self.state = DUNGSTATE.SPLASH2
-        elseif self.state == DUNGSTATE.SPLASH2 then
-            spr(34, self.x, 128-self.y)
-            self.state = DUNGSTATE.SPLASH3
-        elseif self.state == DUNGSTATE.SPLASH3 then
-            spr(35, self.x, 128-self.y)
-            self.state = DUNGSTATE.GONE
-        end
+    function dung:draw()        
+            spr(self.state.sprite, self.x, 128-self.y)
+            -- print(self.state.time, self.x, 128-self.y, 3) -- Debugging: print the time left for the current state
     end
     ---------------------------
     function dung:get_x_y_r()
