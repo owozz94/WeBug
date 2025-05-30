@@ -4,7 +4,7 @@ function _init()
     -- Initialize the game
     cls(0)
     x = 64
-    y = 100
+    y = 110
     g = 0.8
     print("Game initialized") --print(text,x,y,color : PICO-8의 팔레트 색상))
 end
@@ -17,7 +17,7 @@ function _update()
     print("_update")
     if btn(0) then x = x-3 msg = 1 end
     if btn(1) then x = x+3 msg = 2 end
-    if btn(4) then y = y-5 end
+    if btn(4) then y = y-5 sfx(1) end    
     y += 0.9     
     if(y > 100) then
         y = 100
@@ -28,7 +28,7 @@ end
 function _draw()
     -- Draw the screen
     cls(0)
-    dungbox:draw()
+    
     --print(x);
     for i=x,x+3 do print(i) end;
     --벽 계산
@@ -41,7 +41,7 @@ function _draw()
         if(x % 2 == 1) then msg=1 end
     end
  
-        
+    dungbox:draw()
     spr(msg, x, y);
      
 end
