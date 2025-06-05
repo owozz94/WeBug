@@ -42,6 +42,6 @@ function _draw()
     end
  
     dungbox:draw()
-    spr(msg, x, y);
+    spr(msg+16, x, y);
      
 end
