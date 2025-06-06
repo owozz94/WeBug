@@ -12,7 +12,8 @@
 
 # demos folder
 AppData/
-screenshots/
+screenshots/*
+!screenshots/.gitkeep
 
 
 # End of https://www.toptal.com/developers/gitignore/api/pico8
