@@ -28,7 +28,7 @@ end
 function _draw()
     -- Draw the screen
     cls(0)
-    
+    map(0,0,0,0,128,32);
     --print(x);
     for i=x,x+3 do print(i) end;
     --벽 계산
