@@ -11,7 +11,9 @@
 #*.bin
 
 # demos folder
-AppData/
+AppData/*
+!AppData/.gitkeep
+
 screenshots/*
 !screenshots/.gitkeep
 
