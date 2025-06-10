@@ -11,11 +11,12 @@
 #*.bin
 
 # demos folder
-AppData/*
-!AppData/.gitkeep
+pico-8/AppData/*
+!pico-8/AppData/.gitkeep
 
 screenshots/*
 !screenshots/.gitkeep
 
 
 # End of https://www.toptal.com/developers/gitignore/api/pico8
+
