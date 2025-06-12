@@ -36,10 +36,9 @@ function _draw()
         --LOBBY-----------------------------------------------------------        
         lobby:draw()
     elseif (gamestate == GAMESTATE.STAGE1) then
-        --STAGE1------------------------------------------------------------                
-        
-        dungbox:draw()
+        --STAGE1------------------------------------------------------------                                
         map(0,0,0,0,128,32);
+        dungbox:draw()
         --print(x);
         for i=x,x+3 do print(i) end;
         --벽 계산
