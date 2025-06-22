@@ -1,5 +1,20 @@
 dungbox = new_dungbox()
 lobby = new_lobby()
+game = {
+    state = GAMESTATE.LOBBY,    
+    player1 =
+    {
+        enable = true,
+        charactor = 1,
+        life = 3
+    },
+    plyaer2 = 
+    {
+        enable = true,
+        charactor = 2,
+        life = 3
+    }
+}
 gamestate = GAMESTATE.LOBBY
 
 function _init()
@@ -11,8 +26,7 @@ function _init()
 end
 
 msg = 1
-function _update()    
-
+function _update()
     if (gamestate == GAMESTATE.LOBBY) then
         --LOBBY-----------------------------------------------------------
         gamestate = lobby:update()
